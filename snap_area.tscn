@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bibquweqev708"]
+
+[ext_resource type="Script" path="res://Scripts/SnapArea.gd" id="1_tvu6t"]
+[ext_resource type="ArrayMesh" uid="uid://dsiyqaauu1obw" path="res://Assets/ShipParts/base_module.obj" id="2_cyr2k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dscbf"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovspc"]
+transparency = 1
+albedo_color = Color(0, 1, 0, 0.117647)
+
+[node name="SnapArea" type="Area3D"]
+script = ExtResource("1_tvu6t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_dscbf")
+
+[node name="Indicator" type="Node3D" parent="."]
+visible = false
+
+[node name="IndicatorShape" type="MeshInstance3D" parent="Indicator"]
+mesh = ExtResource("2_cyr2k")
+surface_material_override/0 = SubResource("StandardMaterial3D_ovspc")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
