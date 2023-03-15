@@ -1,6 +1,4 @@
-res://Module.gd
-res://node_3d.tscn
 res://Assets/ShipParts/base_module.tscn
-res://Scripts/SnapArea.gd
 res://snap_area.tscn
-res://Scripts/base_module.gd
+res://Scripts/Module.gd
+res://Scripts/SnapArea.gd

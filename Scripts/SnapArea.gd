@@ -4,7 +4,7 @@ class_name SnapArea
 
 signal indicator_pressed(pos, normal, orientation, left)
 
-var target_rot = Vector3.ZERO
+var target_rot : Vector3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,6 +23,13 @@ func _process(delta):
 		target_rot.y -= PI/2
 	
 	target_rot = normalize_angle_vec(target_rot)
+	
+	var a = Quaternion($Indicator.transform.basis)
+	var b = Quaternion(target_rot)
+	# Interpolate using spherical-linear interpolation (SLERP).
+	var c = a.slerp(b,0.5) # find halfway point between a and b
+	# Apply back
+	$Indicator.transform.basis = Basis(c)
 	
 func normalize_angle_vec(vec:Vector3)->Vector3:
 	vec.x = normalize_angle(vec.x)
