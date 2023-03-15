@@ -1,4 +1,5 @@
+res://BuildCamera.tscn
+res://Scripts/BuildCamera.gd
+res://Test.tscn
 res://Assets/ShipParts/base_module.tscn
-res://snap_area.tscn
-res://Scripts/Module.gd
-res://Scripts/SnapArea.gd
+res://Assets/ShipParts/snap_area.tscn

@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwobr1nc1niff"]
+[gd_scene load_steps=6 format=3 uid="uid://bhxjwh57xfb6q"]
 
-[ext_resource type="Script" path="res://Scripts/base_module.gd" id="1_byilx"]
 [ext_resource type="ArrayMesh" uid="uid://cy5mdbk482naa" path="res://Assets/ShipParts/BaseModule.tres" id="2_nha43"]
 [ext_resource type="Texture2D" uid="uid://d3uhxqpwuiwi0" path="res://Assets/ShipTextures/control_module.png" id="3_oh0ep"]
-[ext_resource type="PackedScene" uid="uid://bibquweqev708" path="res://snap_area.tscn" id="4_0bjkd"]
+[ext_resource type="PackedScene" uid="uid://bibquweqev708" path="res://Assets/ShipParts/snap_area.tscn" id="4_0bjkd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ut3d"]
 
@@ -12,16 +11,9 @@ albedo_texture = ExtResource("3_oh0ep")
 
 [node name="BaseModule" type="CollisionShape3D"]
 shape = SubResource("BoxShape3D_4ut3d")
-script = ExtResource("1_byilx")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_nha43")
 surface_material_override/0 = SubResource("StandardMaterial3D_cbxdn")
 
 [node name="SnapArea" parent="." instance=ExtResource("4_0bjkd")]
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, -0.353553, 0.612373, -1.29048e-08, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 8, 5, 8)
-current = true
-
-[connection signal="indicator_pressed" from="SnapArea" to="." method="_on_snap_area_indicator_pressed"]
