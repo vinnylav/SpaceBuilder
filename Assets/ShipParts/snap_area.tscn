@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bibquweqev708"]
+[gd_scene load_steps=5 format=3 uid="uid://pi74sk37a0w3"]
 
-[ext_resource type="Script" path="res://Assets/ShipParts/snap_area.gd" id="1_n27m5"]
+[ext_resource type="Script" path="res://Scripts/snap_area.gd" id="1_5d5ha"]
 [ext_resource type="ArrayMesh" uid="uid://dsiyqaauu1obw" path="res://Assets/ShipParts/base_module.obj" id="2_cyr2k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dscbf"]
@@ -11,7 +11,7 @@ transparency = 1
 albedo_color = Color(0, 1, 0, 0.117647)
 
 [node name="SnapArea" type="Area3D"]
-script = ExtResource("1_n27m5")
+script = ExtResource("1_5d5ha")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_dscbf")

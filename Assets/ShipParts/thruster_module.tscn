@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://xafqunwbpj20"]
+
+[ext_resource type="ArrayMesh" uid="uid://dfmsr5ij0at8h" path="res://Assets/ShipParts/thruster_module.tres" id="1_0sr7i"]
+[ext_resource type="Script" path="res://Assets/ShipParts/thruster_module.gd" id="1_u33p4"]
+[ext_resource type="PackedScene" uid="uid://pi74sk37a0w3" path="res://Assets/ShipParts/snap_area.tscn" id="2_vte3w"]
+
+[node name="thruster_module" type="CollisionShape3D"]
+script = ExtResource("1_u33p4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_0sr7i")
+
+[node name="SnapArea" parent="." instance=ExtResource("2_vte3w")]

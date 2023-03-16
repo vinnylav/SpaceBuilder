@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdrthfcho8lfi"]
+
+[ext_resource type="Script" path="res://Assets/ShipParts/Module.gd" id="1_j2k40"]
+[ext_resource type="PackedScene" uid="uid://pi74sk37a0w3" path="res://Assets/ShipParts/snap_area.tscn" id="2_ikncr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gignh"]
+
+[node name="BuildModule" type="CollisionShape3D"]
+script = ExtResource("1_j2k40")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1.98, 0, 0, 0)
+mesh = SubResource("BoxMesh_gignh")
+
+[node name="SnapArea" parent="." instance=ExtResource("2_ikncr")]
+
+[connection signal="indicator_pressed" from="SnapArea" to="." method="_on_snap_area_indicator_pressed"]

@@ -1,5 +1,13 @@
-res://BuildCamera.tscn
-res://Scripts/BuildCamera.gd
-res://Test.tscn
-res://Assets/ShipParts/base_module.tscn
 res://Assets/ShipParts/snap_area.tscn
+res://Assets/ShipParts/base_module.tres
+res://Assets/ShipParts/abstract_module.tscn
+res://Assets/build_camera.tscn
+res://Test.tscn
+res://ship_builder.tscn
+res://Assets/ShipParts/base_module.tscn
+res://Scripts/ship_builder.gd
+res://Assets/ShipParts/base_module.gd
+res://Assets/ShipParts/Module.gd
+res://Assets/ShipParts/armor_module.tres
+res://Assets/ShipParts/armor_module.tscn
+res://Assets/ShipParts/thruster_module.tscn

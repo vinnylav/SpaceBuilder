@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://djerpeci0lcf1"]
+
+[ext_resource type="Script" path="res://Scripts/ship_builder.gd" id="1_tey5s"]
+[ext_resource type="PackedScene" uid="uid://c5w4q2apes81o" path="res://Assets/ShipParts/base_module.tscn" id="2_ybop2"]
+
+[node name="ShipBuilder" type="Node3D"]
+script = ExtResource("1_tey5s")
+
+[node name="BaseModule" parent="." instance=ExtResource("2_ybop2")]

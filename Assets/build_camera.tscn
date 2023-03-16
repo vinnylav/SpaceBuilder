@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2iuvm6e66npm"]
+[gd_scene load_steps=2 format=3 uid="uid://hi18r42b1ja6"]
 
-[ext_resource type="Script" path="res://Scripts/BuildCamera.gd" id="1_p0cid"]
+[ext_resource type="Script" path="res://Scripts/build_camera.gd" id="1_j3k7b"]
 
 [node name="BuildCamera" type="Node3D"]
-script = ExtResource("1_p0cid")
+script = ExtResource("1_j3k7b")
 
 [node name="InnerGimbal" type="Node3D" parent="."]
 

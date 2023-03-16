@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx8l4t26rvch2"]
+
+[ext_resource type="Script" path="res://Assets/ShipParts/armor_module.gd" id="1_tn570"]
+[ext_resource type="ArrayMesh" uid="uid://cyw08opbpcnxo" path="res://Assets/ShipParts/armor_module.tres" id="2_br78v"]
+[ext_resource type="PackedScene" uid="uid://pi74sk37a0w3" path="res://Assets/ShipParts/snap_area.tscn" id="3_tvsl8"]
+
+[node name="armor_module" type="CollisionShape3D"]
+script = ExtResource("1_tn570")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_br78v")
+
+[node name="SnapArea" parent="." instance=ExtResource("3_tvsl8")]
